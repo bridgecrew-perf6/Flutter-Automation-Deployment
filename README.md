@@ -20,23 +20,29 @@ a.	Open Git Bash.
 b.	Change the current working directory to your local project.
 
 c.	Initialize the local directory as a Git repository.
+
      > $ git init -b main
      
 d.	Add the files in your new local repository. This stages them for the first commit.
+
      > $ git add .
      
 e.	Commit the files that you've staged in your local repository.
+
      > $ git commit -m "First commit"
      
 f.	At the top of your repository on GitHub.com's Quick Setup page, click to copy the remote repository URL. 
 
 g.	In the Command prompt add the URL for remote repository where your local repository will be pushed.
+
      > $ git remote add origin  <REMOTE_URL> 
     Sets the new remote URL
+    
      > $ git remote -v
      
 h.	Push the changes in your local repository to GitHub.com.
-    > $ git push origin main
+
+     > $ git push origin main
 
 > Note: - Always compile your code on Local Machine first before using Git Action
 
