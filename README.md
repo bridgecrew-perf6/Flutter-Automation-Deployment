@@ -1,4 +1,5 @@
 #Steps to Release apk using GitHub Actions
+==========================================
 
 ### STEP 1:- Create Repository
 
@@ -85,7 +86,10 @@ g.	Find APK
 	
 5.	Towards bottom of the page-->artifacts/release-apk
 
+=======================================================================================================================================================================
+
 ## Errors And Fixes
+===================
 
 ### Error 1
 
@@ -171,10 +175,11 @@ Description :
 GoTo <workflow>
 Delete Flutter Analyzer due to bug
  
-
+=======================================================================================================================================================================
  
  
  # Creating Flutter Desktop Apllications 
+========================================
  
  
  #### Go to Project directory lib/main.dart
@@ -194,4 +199,9 @@ To create a plugin, we need to use --template=plugin flag
 The name of our plugin will be init_dsktp_plugin
  
 Use the --org option to specify your organization, mostly in the reverse order…i.e, com.flatteredwithflutter
+
+	=======================================================================================================================================================================
+	
+	
+	
 
