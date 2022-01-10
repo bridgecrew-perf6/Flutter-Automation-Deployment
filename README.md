@@ -105,7 +105,7 @@ flutter_icons:
  
 
 ### Error 4
-Analyzer 
+#### Analyzer 
 ReSolution  :
 Ignoring Analysers Due to bug
 GoTo <repository> -->create analysis_options.yaml file
@@ -117,8 +117,9 @@ analyzer:
  
  
 ### Error 5 
-Analyzer
-'flutter analyze' exits with 1 even on 'info':
+#### Analyzer
+
+ 'flutter analyze' exits with 1 even on 'info':
 https://github.com/flutter/flutter/issues/20855
 Description :
 
@@ -143,7 +144,6 @@ Delete Flutter Analyzer due to bug
 flutter create --org com.flatteredwithflutter --template=plugin init_dsktp_plugin
 
 > Breakdown :
-
 To create a plugin, we need to use --template=plugin flag
 The name of our plugin will be init_dsktp_plugin
 Use the --org option to specify your organization, mostly in the reverse order…i.e, com.flatteredwithflutter
