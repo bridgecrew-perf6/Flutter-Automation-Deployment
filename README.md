@@ -129,3 +129,22 @@ Description :
 ReSolution :
 GoTo <workflow>
 Delete Flutter Analyzer due to bug
+ 
+Creating Flutter Desktop Apllications 
+ 
+ Go to Project directory lib/main.dart
+
+add desktop support and desktop runner : 
+
+flutter create --platforms=windows,macos,linux .
+
+Add desktop Plugin :
+
+flutter create --org com.flatteredwithflutter --template=plugin init_dsktp_plugin
+
+Breakdown :
+
+To create a plugin, we need to use --template=plugin flag
+The name of our plugin will be init_dsktp_plugin
+Use the --org option to specify your organization, mostly in the reverse order…i.e, com.flatteredwithflutter
+
