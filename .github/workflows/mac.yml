@@ -38,6 +38,7 @@ jobs:
     - name: Doctor
       # Run doctor, for ease of debugging any issues.
       run: flutter doctor -v
+      #Cheking Desktop Application
     - name: Build lib debug	
       run: |	
         flutter packages get
@@ -48,6 +49,7 @@ jobs:
         flutter packages get	
         flutter build -v ${{matrix.TARGET}} --release	
       working-directory: ${{ github.workspace }}/fde/lib
+      #checking Desktop Plugins
     - name: Build plugins debug	
       run: |	
         flutter packages get
