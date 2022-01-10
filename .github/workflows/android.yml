@@ -9,6 +9,7 @@ jobs:
     name: Build Apps
     runs-on: ubuntu-latest
     steps:
+    #tagging app
       - name: Export Release Timestamp
         run: echo "APP_VERSION=v$(date +'%Y.%m.%d.%H.%M.%S')" >> $GITHUB_ENV
       - name: Checkout repository
@@ -26,6 +27,7 @@ jobs:
         run: flutter pub get
       - name: Run Tests
         run: flutter test
+      #building apk
       - name: Build Android App
         run: flutter build apk --split-per-abi
       - name: Release Apps
