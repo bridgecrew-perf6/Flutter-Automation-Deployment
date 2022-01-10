@@ -9,6 +9,7 @@ jobs:
     name: Ios Apps
     runs-on: macos-latest
     steps:
+    #Tagging Application
       - name: Export Release Timestamp
         run: echo "APP_VERSION=v$(date +'%Y.%m.%d.%H.%M.%S')" >> $GITHUB_ENV
       - name: Checkout repository
@@ -26,6 +27,7 @@ jobs:
         run: flutter pub get
       - name: Run Tests
         run: flutter test
+      #Build Ios App
       - name: Build iOS App
         run: |
           flutter build ios --no-codesign
