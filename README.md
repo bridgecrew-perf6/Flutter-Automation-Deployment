@@ -130,7 +130,11 @@ ReSolution :
 GoTo <workflow>
 Delete Flutter Analyzer due to bug
  
-Creating Flutter Desktop Apllications 
+
+ 
+ 
+ **Creating Flutter Desktop Apllications** 
+ 
  
  Go to Project directory lib/main.dart
 
