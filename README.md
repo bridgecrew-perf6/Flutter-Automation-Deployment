@@ -86,8 +86,11 @@ g.	Find APK
 #### Conflicting Outputs 
 
 #### Description : 
+
 Assume conflicting outputs in the users package are from previous builds, and skip the user prompt that would usually be provided.
+
 #### ReSolution :
+
 GoTo<workflow.yaml> -->Update Following Dependancies
 > Get flutter dependencies.
     - run: flutter pub get
@@ -96,11 +99,16 @@ GoTo<workflow.yaml> -->Update Following Dependancies
 
 
 ### Error 2 
+
 #### Build Error
+
 #### Description :-
+
 When the packages providing Builders are configured with a build.yaml file they are designed to be consumed using an generated build script. Most builders should need little or no configuration, see the documentation provided with the Builder to decide whether the build needs to be customized. If it does you may also provide a build.yaml with the configuration. See the package:build_config README for more information on this file.
 To have web code compiled to js add a dev_dependency on build_web_compilers.
+
 #### ReSolution :
+
 GoTo pubspec.yaml -->Update Build Runner
  
 
@@ -173,7 +181,7 @@ Delete Flutter Analyzer due to bug
 
 > flutter create --org com.flatteredwithflutter --template=plugin init_dsktp_plugin
 
-> Breakdown :
+Breakdown :
  
 To create a plugin, we need to use --template=plugin flag
  
