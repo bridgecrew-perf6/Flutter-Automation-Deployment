@@ -16,21 +16,21 @@ Note : Before using git actions compile flutter code on local environment for an
 
 # Setting Up New Workflow
 
-## Step 1: 
+### Step 1: 
 
 Navigate to your repo on GitHub, and select the Actions tab.
 
 ![image](https://user-images.githubusercontent.com/71278693/148893070-ae70a79c-5ed9-4975-a5df-e1cf5057e89c.png)
 
 
-## Step 2: 
+### Step 2: 
 
 In the actions tab we can see that there is the option to set up the workflow from scratch by selecting the ‘Set up a workflow yourself’ link, or by leveraging one of the multiple templates provided. It is these templates that make building these workflow simple.
  
 ![image](https://user-images.githubusercontent.com/71278693/148893125-c8e40f0c-876a-46dd-bac4-3064e6001831.png)
 
 
-## Step 3: 
+### Step 3: 
 
 By clicking on one of the options, we are sent to the console editor where we can begin building our workflow.
 
