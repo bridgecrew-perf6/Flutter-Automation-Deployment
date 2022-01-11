@@ -1,3 +1,19 @@
+# FLutter Automation Deployment Using GitActions
+
+### Objective
+
+Setup Workflow To Build And Release Apps
+
+### What should happen?
+
+1. Flutterflow Push Code To The GIthub Acoount
+2. Git actions should get triggered
+a. build apk
+b. release apk
+
+Note : Before using git actions compile flutter code on local environment for any errors.
+
+
 # Setting Up New Workflow
 
 ## Step 1: 
@@ -18,7 +34,7 @@ In the actions tab we can see that there is the option to set up the workflow fr
 
 By clicking on one of the options, we are sent to the console editor where we can begin building our workflow.
 
-![image](https://user-images.githubusercontent.com/71278693/148893167-ebb3b8a0-8648-44ef-9cd1-164dc1adfc3c.png)
+![image](https://user-images.githubusercontent.com/71278693/148895271-8da21f91-e776-4422-af36-61a370edbc4e.png)
 
  
 # Creating a Workflow File
