@@ -8,8 +8,10 @@ Setup Workflow To Build And Release Apps
 
 1. Flutterflow Push Code To The GIthub Acoount
 2. Git actions should get triggered
-a. build apk
-b. release apk
+
+	a. build apk
+	
+	b. release apk
 
 Note : Before using git actions compile flutter code on local environment for any errors.
 
