@@ -92,11 +92,11 @@ https://raw.githubusercontent.com/digvijay13873/Flutter-Automation-Deployment/ma
 ![Screenshot (95)](https://user-images.githubusercontent.com/71278693/148894308-443fb82c-7af2-4164-bee8-3ab3ee4a0699.png)
 
 
-** For Setting Up Flutter Desktop Applications Refer To below Link :
+**For Setting Up Flutter Desktop Applications Refer To below Link :
 
 https://medium.com/@digvijay13873/gitactions-for-flutter-desktop-applications-593f258a620e?source=friends_link&sk=86fd7a410d7bd728e8754fe2c9a7c34a
 
-** If You Encounter Any Errors Here Are Some Useful Resources :
+**If You Encounter Any Errors Here Are Some Useful Resources :
 
 https://medium.com/@digvijay13873/fixing-errors-for-flutter-gitactions-automation-6961b21536cc?source=friends_link&sk=f9bc385c2440118b0b74bc50e5294d7b
 	
