@@ -1,207 +1,80 @@
-#Steps to Release apk using GitHub Actions
-==========================================
+# Setting Up New Workflow
 
-### STEP 1:- Create Repository
+## Step 1: 
 
- a. Login to your Github account
+Navigate to your repo on GitHub, and select the Actions tab.
+
+![image](https://user-images.githubusercontent.com/71278693/148893070-ae70a79c-5ed9-4975-a5df-e1cf5057e89c.png)
+
+
+## Step 2: 
+
+In the actions tab we can see that there is the option to set up the workflow from scratch by selecting the ‘Set up a workflow yourself’ link, or by leveraging one of the multiple templates provided. It is these templates that make building these workflow simple.
  
- b. In the upper-right corner of any page, use the drop-down 
+![image](https://user-images.githubusercontent.com/71278693/148893125-c8e40f0c-876a-46dd-bac4-3064e6001831.png)
+
+
+## Step 3: 
+
+By clicking on one of the options, we are sent to the console editor where we can begin building our workflow.
+
+![image](https://user-images.githubusercontent.com/71278693/148893167-ebb3b8a0-8648-44ef-9cd1-164dc1adfc3c.png)
+
  
- c. Type a name for your repository, and an optional description.
- 
- d. Choose a repository visibility
+# Creating a Workflow File
 
- e. Click Create repository.
- 
+The first thing you have to do is create a .yml file, which is a configuration file that Github Action can understand.
+You must store workflow files in the .github/workflows/ directory in your repository. You can name the file whatever you want, for this tutorial name it flutter-ci.yml.
+.github/workflows/flutter-ci.yml
 
-### STEP 2:- Pull Flutter code from your local machine
+### on
+Github Actions will execute the workflow following the events under on key. In this example, we want to run it only when we push to master branch but you can add any of your preferred branches.
 
-a.	Open Git Bash.
+### job
+A workflow run is made up of one or more jobs. For our example, we need only one job.
 
-b.	Change the current working directory to your local project.
+### runs-on
+The type of virtual host machine to run the job on. For our case, we need ubuntu-latest.
+Each ubuntu host machine contains different installed software. You can check a list of supported software, tools, and packages in each virtual environment here.
 
-c.	Initialize the local directory as a Git repository.
+### steps
+A job contains a sequence of tasks called steps.
+You can have a granular step that runs only one command or a multi-line with a sequence of tasks pack together.
+Let’s go through a series of steps in order to meet our requirements.
+1. We have to set up the Flutter environment for the Github Actions and for that we will be using subosito/flutter-action .
+2. Write the command to get the Flutter dependencies.
+- run: flutter pub get
+3. Check for any formatting issues in the code.
+- run: flutter format --set-exit-if-changed .
+4. Statically analyze the Dart code for any errors.
+- run: flutter analyze .
+5. Run widget tests for our flutter project.
+- run: flutter test
+6. Build an Android APK.
+- run: flutter build apk
+7. Finally, upload our generated app-release.apk for our workflow to the artifacts. For this, we will be using actions/upload-artifact .
 
-     > $ git init -b main
-     
-d.	Add the files in your new local repository. This stages them for the first commit.
+![image](https://user-images.githubusercontent.com/71278693/148893564-3a877a9d-cc2d-4a20-88dc-efa389dfd704.png)
 
-     > $ git add .
-     
-e.	Commit the files that you've staged in your local repository.
-
-     > $ git commit -m "First commit"
-     
-f.	At the top of your repository on GitHub.com's Quick Setup page, click to copy the remote repository URL. 
-
-g.	In the Command prompt add the URL for remote repository where your local repository will be pushed.
-
-     > $ git remote add origin  <REMOTE_URL> 
-    Sets the new remote URL
-    
-     > $ git remote -v
-     
-h.	Push the changes in your local repository to GitHub.com.
-
-     > $ git push origin main
-
-> Note: - Always compile your code on Local Machine first before using Git Action
-
-### STEP 3:- Use Git Action
-a.	 Check all the files that you have pushed to your github account
-
-b.	 Go to Actions tab 
-> GitHub Actions uses YAML syntax to define the workflow. Each workflow is stored as a separate YAML file in your code repository, in a directory called .github/workflows.
-> 
-c.	Setup your workflow by clicking the highlighted link or choose a suggested workflow for your repository. 
-
-d.	Check the YAML script and Click the “Commit” button. 
-
-### STEP 4:- View Workflow Activity
-
-a.	Once your workflow has started running, you can see a visualization graph of the run's progress and view each step's activity on GitHub.
-
-b.	On GitHub.com, navigate to the main page of the repository.
-
-c.	Under your repository name, click Actions
-
-d.	In the left sidebar, click the workflow you want to see.
-
-e.	Under "Workflow runs", click the name of the run you want to see 
-
-f.	View the results of each step. 
-
-g.	Find APK
-  
  
   ## Where to find the apk?
   
 1.	 Go to your Repository
 	 
-2.	Click the Actions tab
+2.	 On riht side of Screen Releases Section
 
-3.	Select the desired workflow
-	
-4.	Click on successful workflow
-	
-5.	Towards bottom of the page-->artifacts/release-apk
+3.	 You can find Your Releases here
 
-=======================================================================================================================================================================
-
-## Errors And Fixes
-===================
-
-### Error 1
-
-#### Conflicting Outputs 
-
-#### Description : 
-
-Assume conflicting outputs in the users package are from previous builds, and skip the user prompt that would usually be provided.
-
-#### ReSolution :
-
-GoTo<workflow.yaml> -->Update Following Dependancies
-> Get flutter dependencies.
-    - run: flutter pub get
-    - run: flutter packages pub run build_runner build --delete-conflicting-outputs
-    - run: flutter pub run flutter_launcher_icons:main
+![Screenshot (95)](https://user-images.githubusercontent.com/71278693/148894308-443fb82c-7af2-4164-bee8-3ab3ee4a0699.png)
 
 
-### Error 2 
+**For Setting Up Flutter Desktop Applications Refer To below Link :
 
-#### Build Error
+https://medium.com/@digvijay13873/gitactions-for-flutter-desktop-applications-593f258a620e?source=friends_link&sk=86fd7a410d7bd728e8754fe2c9a7c34a
 
-#### Description :-
+**If You Encounter Any Errors Here Are Some Useful Resources :
 
-When the packages providing Builders are configured with a build.yaml file they are designed to be consumed using an generated build script. Most builders should need little or no configuration, see the documentation provided with the Builder to decide whether the build needs to be customized. If it does you may also provide a build.yaml with the configuration. See the package:build_config README for more information on this file.
-To have web code compiled to js add a dev_dependency on build_web_compilers.
-
-#### ReSolution :
-
-GoTo pubspec.yaml -->Update Build Runner
- 
-
-
-### Error 3
-
-#### Launcher Icon
-
-Could not find package "flutter_launcher_icons". Did you forget to add a dependency?
-https://github.com/fluttercommunity/flutter_launcher_icons/issues/147
-
-#### Description :
-
-A package which simplifies the task of updating your Flutter app's launcher icon.
-
-#### ReSolution :
-
-> Goto<repository>-->pubspec.yaml
-Update the Following Parameters
-dev_dependencies:
-  flutter_launcher_icons: "^0.8.1"
-flutter_icons:
-  android: "launcher_icon"
-  ios: true
-  image_path: "assets/images/favicon.png"
- 
- 
-### Error 4
- 
-#### Analyzer 
- 
-#### ReSolution  :
- 
-Ignoring Analysers Due to bug
-GoTo <repository> -->create analysis_options.yaml file
-Put following Parameters In pubspec.yaml file
-analyzer:
-  errors:
-    todo: ignore
-
- 
- 
-### Error 5 
- 
-#### Analyzer
-
- 'flutter analyze' exits with 1 even on 'info':
-https://github.com/flutter/flutter/issues/20855
- 
-Description :
-
-#### ReSolution :
- 
-GoTo <workflow>
-Delete Flutter Analyzer due to bug
- 
-=======================================================================================================================================================================
- 
- 
- # Creating Flutter Desktop Apllications 
-========================================
- 
- 
- #### Go to Project directory lib/main.dart
-
-#### add desktop support and desktop runner : 
-
-> flutter create --platforms=windows,macos,linux .
-
-#### Add desktop Plugin :
-
-> flutter create --org com.flatteredwithflutter --template=plugin init_dsktp_plugin
-
-Breakdown :
- 
-To create a plugin, we need to use --template=plugin flag
- 
-The name of our plugin will be init_dsktp_plugin
- 
-Use the --org option to specify your organization, mostly in the reverse order…i.e, com.flatteredwithflutter
-
-	=======================================================================================================================================================================
-	
+https://medium.com/@digvijay13873/fixing-errors-for-flutter-gitactions-automation-6961b21536cc?source=friends_link&sk=f9bc385c2440118b0b74bc50e5294d7b
 	
 	
 
