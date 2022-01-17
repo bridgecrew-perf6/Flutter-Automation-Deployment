@@ -23,10 +23,15 @@ Note : Before using git actions compile flutter code on local environment for an
 ### How To Merge To MAIN Branch ???
 
 Go to Pull Requests--->New Pull Request
+
 ![Screenshot (135)](https://user-images.githubusercontent.com/71278693/149758958-032ac769-800a-4243-bf87-065621f7db92.png)
+
 Set Base Branch as MAIN and Compare branch as FLUTTERFLOW------>Create New Pull Request
+
 ![Screenshot (143)](https://user-images.githubusercontent.com/71278693/149761205-b6ddb44b-4c12-475d-b156-425ed9b0c2f3.png)
+
 Merging Changes/Pull Request
+
 ![Screenshot (146)](https://user-images.githubusercontent.com/71278693/149761597-2b3357eb-dd07-4b65-83bf-da5add1a7605.png)
 
 
