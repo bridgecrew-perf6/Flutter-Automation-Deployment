@@ -11,7 +11,7 @@ Setup Workflow To Build And Release Apps
 
 1. Flutterflow Push Code To The GIthub Acoount
  
-## Note : Workflow is Working In only Main Branch.To Merge Flutterflow branch with main branch Create new Pull Request and merge with main branch.
+### Note : Workflow is Working In only Main Branch.To Merge Flutterflow branch with main branch Create new Pull Request and merge with main branch.
 
 2. Git actions should get triggered
 
