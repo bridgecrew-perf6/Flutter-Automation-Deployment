@@ -127,8 +127,6 @@ Build Release
 
 ```flutter build windows``` 
 
-Desktop Build Commands 
-
 ![image](https://user-images.githubusercontent.com/71278693/149717997-37aa1e67-1041-40c5-8480-8a72eadf203d.png)
 
 ## Where To Find Builds ?
