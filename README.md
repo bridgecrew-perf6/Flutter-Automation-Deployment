@@ -103,5 +103,50 @@ https://medium.com/@digvijay13873/gitactions-for-flutter-desktop-applications-59
 
 https://medium.com/@digvijay13873/fixing-errors-for-flutter-gitactions-automation-6961b21536cc?source=friends_link&sk=f9bc385c2440118b0b74bc50e5294d7b
 	
-	
+# Flutter Desktop Applications
+
+## Flutter Desktop Release :
+
+Desktop support allows you to compile Flutter source code to a native Windows, macOS, or Linux desktop app. Flutter’s desktop support also extends to plugins—you can install existing plugins that support the Windows, macOS, or Linux platforms, or you can create your own.
+
+### commands : 
+
+for windows platform (same commands can be used for Linux and MacOs plantforms)
+
+### Step : 1
+
+Enable Platform Support
+
+```flutter config --enable-windows-desktop```
+
+### Step : 2
+
+Create Plantform Dependant Runners
+
+```flutter create --platforms=windows,macos,linux .```
+
+### Step : 3
+
+Build Release
+
+```flutter build windows``` 
+
+Desktop Build Commands 
+
+![image](https://user-images.githubusercontent.com/71278693/149717997-37aa1e67-1041-40c5-8480-8a72eadf203d.png)
+
+## Where To Find Builds ?
+
+For Windows Builds , 
+
+```<project root folder>/build/windows/runner/release```
+
+For Linux Builds , 
+
+``<project root folder>/flutter_navigate2.0/build/linux/x64/release/bundle```
+
+Click Here To Know More :
+https://docs.flutter.dev/desktop
+
+
 
