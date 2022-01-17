@@ -67,15 +67,15 @@ You can have a granular step that runs only one command or a multi-line with a s
 Let’s go through a series of steps in order to meet our requirements.
 1. We have to set up the Flutter environment for the Github Actions and for that we will be using subosito/flutter-action .
 2. Write the command to get the Flutter dependencies.
-- run: flutter pub get
+```- run: flutter pub get```
 3. Check for any formatting issues in the code.
-- run: flutter format --set-exit-if-changed .
+```- run: flutter format --set-exit-if-changed .```
 4. Statically analyze the Dart code for any errors.
-- run: flutter analyze .
+```- run: flutter analyze .```
 5. Run widget tests for our flutter project.
-- run: flutter test
+```- run: flutter test```
 6. Build an Android APK.
-- run: flutter build apk
+```- run: flutter build apk```
 7. Finally, upload our generated app-release.apk for our workflow to the artifacts. For this, we will be using actions/upload-artifact .
 
 ![image](https://user-images.githubusercontent.com/71278693/148893564-3a877a9d-cc2d-4a20-88dc-efa389dfd704.png)
@@ -94,10 +94,6 @@ https://raw.githubusercontent.com/digvijay13873/Flutter-Automation-Deployment/ma
 
 ![Screenshot (95)](https://user-images.githubusercontent.com/71278693/148894308-443fb82c-7af2-4164-bee8-3ab3ee4a0699.png)
 
-
-**For Setting Up Flutter Desktop Applications Refer To below Link :
-
-https://medium.com/@digvijay13873/gitactions-for-flutter-desktop-applications-593f258a620e?source=friends_link&sk=86fd7a410d7bd728e8754fe2c9a7c34a
 
 **If You Encounter Any Errors Here Are Some Useful Resources :
 
@@ -143,7 +139,7 @@ For Windows Builds ,
 
 For Linux Builds , 
 
-``<project root folder>/flutter_navigate2.0/build/linux/x64/release/bundle```
+```<project root folder>/flutter_navigate2.0/build/linux/x64/release/bundle```
 
 Click Here To Know More :
 https://docs.flutter.dev/desktop
