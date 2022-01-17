@@ -88,7 +88,7 @@ https://raw.githubusercontent.com/digvijay13873/Flutter-Automation-Deployment/ma
   
 1.	 Go to your Repository
 	 
-2.	 On riht side of Screen Releases Section
+2.	 On right side of Screen Releases Section
 
 3.	 You can find Your Releases here
 
